@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/slider.css">
+    <!-- <script src="app.js" defer></script> -->
+   
+
+</head>
+
+<body>
+    <!-- starting navbar -->
+
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo"><a href="index.html">FotoGenie</a></div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#">Why Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="package.html">Package</a></li>
+                <!-- <li><a href="#">Our Story</a></li> -->
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Get a Quote</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- end of navbar -->
+
+    <!-- start intro section -->
+
+    <div class="gallery-intro">
+
+        <div class="gallery-content">
+            <p>Wants to Know</p>
+            <h1>Why People Choose our services ??</h1>
+         
+        </div>
+    </div>
+
+    <!-- end of intro section  -->
+
+    <!-- start of slider  -->
+    <main>
+        <div class="container">
+          <div class="image-container">
+            <img
+              class="image-before slider-image"
+             src="images/dulha-before.jpeg"
+              alt="color photo"
+            />
+            <img
+              class="image-after slider-image"
+              src="images/dulha-1.jpeg"
+              alt="black and white"
+            />
+          </div>
+          <!-- step="10" -->
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            aria-label="Percentage of before photo shown"
+            class="slider"
+          />
+          <div class="slider-line" aria-hidden="true"></div>
+          <div class="slider-button" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <rect width="256" height="256" fill="none"></rect>
+              <line
+                x1="128"
+                y1="40"
+                x2="128"
+                y2="216"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></line>
+              <line
+                x1="96"
+                y1="128"
+                x2="16"
+                y2="128"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></line>
+              <polyline
+                points="48 160 16 128 48 96"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polyline>
+              <line
+                x1="160"
+                y1="128"
+                x2="240"
+                y2="128"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></line>
+              <polyline
+                points="208 96 240 128 208 160"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polyline>
+            </svg>
+          </div>
+        </div>
+ 
+      </main>
+ 
+
+    <!-- end of slider -->
+
+
+<div class="footer">
+    footer here
+</div>
+    
+<!-- lightgallery js -->
+
+<script>
+    const container = document.querySelector('.container');
+    document.querySelector('.slider').addEventListener('input', (e) => {
+  container.style.setProperty('--position', `${e.target.value}%`);
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        offset: 200,
+        duration: 1000,
+        });
+</script>
+
+
+
+<script>
+    lightGallery(document.querySelector('.portfolio .portfolio-container'));
+</script>
+</body>
+</html>
